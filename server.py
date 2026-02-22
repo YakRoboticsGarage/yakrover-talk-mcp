@@ -1,5 +1,6 @@
 import json
 import os
+from concurrent.futures import CancelledError
 
 from fastmcp import FastMCP
 
@@ -137,10 +138,13 @@ def spoken_keypoints_prompt() -> str:
 
 
 def main():
-    if MCP_TRANSPORT == "http":
-        mcp.run(transport="http", host=MCP_HOST, port=MCP_PORT)
-    else:
-        mcp.run()
+    try:
+        if MCP_TRANSPORT == "http":
+            mcp.run(transport="http", host=MCP_HOST, port=MCP_PORT)
+        else:
+            mcp.run()
+    except (KeyboardInterrupt, CancelledError):
+        pass
 
 
 if __name__ == "__main__":
