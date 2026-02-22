@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+.mcp.json
+/tmp/talk_mcp_speech.mp3
+sample-audio/*.mp3
+sample-audio/templates.json

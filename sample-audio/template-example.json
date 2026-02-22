@@ -1,0 +1,14 @@
+{
+  "greeting": {
+    "file": "greeting.mp3",
+    "description": "A friendly greeting. Use when the user says hello or starts a new conversation."
+  },
+  "victory": {
+    "file": "victory.mp3",
+    "description": "A celebration sound. Use when a task completes successfully, tests pass, or the user achieves something."
+  },
+  "thinking": {
+    "file": "thinking.mp3",
+    "description": "A 'hmm, let me think' sound. Use when processing a complex question or before a long response."
+  }
+}
