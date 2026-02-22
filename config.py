@@ -22,7 +22,7 @@ PIPEWIRE_SINK = os.environ.get("PIPEWIRE_SINK", None)
 AUDIO_PLAYER = os.environ.get("AUDIO_PLAYER", "pw-play")
 
 # Directory for audio files (samples, clips, etc.)
-AUDIO_FILES_DIR = os.environ.get("AUDIO_FILES_DIR", os.path.join(os.path.dirname(__file__), "sample-audio"))
+AUDIO_FILES_DIR = os.environ.get("AUDIO_FILES_DIR") or os.path.join(os.path.dirname(__file__), "sample-audio")
 
 # MCP transport: "stdio" (local) or "http" (remote)
 MCP_TRANSPORT = os.environ.get("MCP_TRANSPORT", "stdio")
